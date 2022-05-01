@@ -1,0 +1,106 @@
+{
+  "Rows": {
+    "Count": 29
+  },
+  "Cols": {
+    "Count": 18
+  },
+  "Values": {
+    "0,0": "  ",
+    "7,3": "2단계 보안인증",
+    "9,3": "휴대폰의 인증앱을 이용하여 위 QR코드 이미지를 스캔하십시오.",
+    "22,3": "다음"
+  },
+  "AttachInfos": {
+    "3,4": {
+      "CellType": {
+        "$type": "Forguncy.ImageCellType, ServerDesignerCommon",
+        "ImagePath": "fgc_logo_light.png"
+      }
+    },
+    "13,5": {
+      "CellType": {
+        "$type": "Forguncy.BarcodeCellType, ServerDesignerCommon",
+        "CodeType": "QRCode",
+        "ForguncyAttribute": "MFA_Secret_Barcode"
+      }
+    },
+    "22,3": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "Text": "다음",
+        "AutoExecute": true,
+        "TemplateKey": "_RS_Outline_RoundCorner_Style2",
+        "ForguncyAttribute": "MFA_Secret_Next_Button"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0,
+        "FontSize": 18.666666666666664,
+        "FontWeight": 1,
+        "Foreground": 2,
+        "HorizontalAlignment": 3
+      },
+      {
+        "FontFamily": 0,
+        "FontSize": 13.333333333333332,
+        "Foreground": 2,
+        "VerticalAlignment": 4,
+        "WordWrap": true
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "Bold",
+        "Background 1 0",
+        "Center",
+        "Top"
+      ]
+    },
+    "CellStyles": {
+      "7,3": 0,
+      "9,3": 1
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "3,4,3,10",
+    "22,3,2,12",
+    "13,5,8,8",
+    "7,3,2,12",
+    "9,3,3,12"
+  ],
+  "BackgroundPictures": [
+    {
+      "FitToBrowserWidth": true,
+      "FitToBrowserHeight": true,
+      "DisplayName": "배경 이미지1",
+      "ForguncyPictureName": "MobileLoginBackground",
+      "Stretch": 3,
+      "ForguncyPictureSourceType": 2,
+      "Name": "BackgroundPicture0",
+      "Size": "360,580"
+    }
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "Title": "2단계 보안인증",
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "IsBuiltInPage": true,
+    "IsMobilePage": true
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//TOyGxhU7MgO5UE2siTj8zhRiTykwH7qRHH0VeCJY9tkgo2o0XjShqi+IdizEINosN4sucuyH3+Qzh8REv9XxE7ACy4IGAqhlkPr+hBuVM9LWprZKBEj5A/3XqMV20ooktMoogRt8t9sr5pRy15nau7jD0GFDf12eCZPJlRX71Q27yVcXGxljy6Y1xQJqGPJPbfvVl6y8/F00EFlrtb8h5qAjTzmcmxNDEFFABYgaMcU6ccWJo4h9Ft3PgB1pR8RXk8jcHWxDm8weD48L/kNqrJCQthI/ocfoIO1RJTNVA76vP3hOxztgftEoWaX5Y2+sGmn3vxJBB24ZXC6QuT3sy+QIB6L4QQ78oFHmpGgEDJQOcjznyKqSw7pLvDKSFGqBcLmMXF7pwutTbm3lV4CGkQyM4WP9atDHSsFB8hXHks4heP7ReRjCO4AqT7hhEcGamUFvlkS0/jj05KTTswP3x+ur36lusDpCUfd9OOb/omek5gYKtRJSGRTDBMoPWXl/wR2jMsGkvR9+49Z7fEW8sCH3mVoc/ASNiEAKpLoaHz1y0XHKwGr4bosThVsNkbduSGTEj8te4JW1RU4Q4RgXTt/QJcUWQfLGHO+F8nNwee1X/hkIIfe3yfiiAl8xkqeQxlHfd4RQN41qHHj/vm/VXArdJ1UAho27R6+4B/+1kY4qjA1Egz6I4+RzLQcNUvmoffAgeuTfi01nxHtPt7kEBhHJJTzwmAty3A2wIEH/mpJWeRjxyEPIIEcQ5kKDySq+m8cAd4HO2ESHfyIDF5njWGJw4Ww2IXv4AI3LAxPQSdn75scH1ossG2i2pfXcTcHwYgvOQ4PHRparpdcO8JwUEniNP2uQRYyorf2tS79qr+3sxCIBXDjFX3wRo4FDIUatw1q8tFhHH/Yj6n90kjobgQ==|920

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationSettings>
+  <IntegrateWithOtherApplication>
+    <Password>roHU@D*$u8ST</Password>
+  </IntegrateWithOtherApplication>
+  <MaxRowCount>10000000</MaxRowCount>
+  <NotAllowModifyDatabaseByJsApi>False</NotAllowModifyDatabaseByJsApi>
+  <StartDateFiscalYear>4</StartDateFiscalYear>
+  <StartPage>SEARCH</StartPage>
+  <UserServicePort>14270</UserServicePort>
+  <WebSitePort>23357</WebSitePort>
+</ApplicationSettings>

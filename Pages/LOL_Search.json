@@ -1,0 +1,228 @@
+{
+  "Rows": {
+    "Count": 45
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "41": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 5.0,
+          "IsHidden": true
+        }
+      },
+      "42": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 120.0,
+          "IsHidden": true
+        }
+      },
+      "43": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 326.0,
+          "Mode": 1
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      0,
+      41,
+      42,
+      44,
+      45
+    ],
+    "Count": 46
+  },
+  "Values": {
+    "0,42": "Service_URL",
+    "0,43": "https://kr.api.riotgames.com/",
+    "1,42": "API_KEY",
+    "1,43": "RGAPI-31943049-81ad-4ff1-9a99-52468b4537ca",
+    "2,42": "id",
+    "3,42": "id_search",
+    "3,43": "lol/summoner/v4/summoners/by-name",
+    "4,42": "search",
+    "4,43": "lol/league/v4/entries/by-summoner/",
+    "10,42": "Search_Query",
+    "12,42": "Search_URL"
+  },
+  "Formulas": {
+    "12,43": "AR1&AR4&\"/\"&ENCODEURL(AD2)",
+    "10,43": "AR1&AR5&AR3"
+  },
+  "AttachInfos": {
+    "1,29": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "1,38": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=LOL_Search!AD2"
+                      }
+                    ]
+                  },
+                  "value": "%Null%",
+                  "compareType": 1,
+                  "Id": "60329766-860e-4aa0-ac03-01b402e77164"
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "계정으로 검색",
+                    "Parameters": [
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=LOL_Search!AR2"
+                        },
+                        "ParamName": "api_key"
+                      },
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=LOL_Search!AR13"
+                        },
+                        "ParamName": "url"
+                      }
+                    ],
+                    "ResultMessageTo": {
+                      "SerializeProperty": "=LOL_Search!C5"
+                    },
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "JsonDataSource.SetJsonDataToCellCommand, JsonDataSource",
+                    "CellInfos": [
+                      {
+                        "Cell": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=LOL_Search!AR3"
+                        },
+                        "PropertyName": "id"
+                      }
+                    ],
+                    "SourceCell": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=LOL_Search!C5"
+                    }
+                  },
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "티어 검색",
+                    "Parameters": [
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=LOL_Search!AR2"
+                        },
+                        "ParamName": "api_key"
+                      },
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=LOL_Search!AR11"
+                        },
+                        "ParamName": "url"
+                      }
+                    ],
+                    "ResultMessageTo": {
+                      "SerializeProperty": "=LOL_Search!C5"
+                    },
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  }
+                ],
+                "ID": "98d4ed6a-b833-4f69-bf1c-f23a441e5e02"
+              }
+            ]
+          }
+        ],
+        "AutoExecute": true,
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Formatter": 0
+      },
+      {
+        "Formatter": 1
+      },
+      {
+        "FontFamily": 2,
+        "Formatter": 0
+      },
+      {
+        "WordWrap": true
+      },
+      {
+        "Background": 3
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "[AUTO]General",
+        "@",
+        "Body",
+        "#FFFFFF00"
+      ]
+    },
+    "CellStyles": {
+      "0,43": 0,
+      "1,29": 1,
+      "1,42": 2,
+      "1,43": 2,
+      "4,2": 3,
+      "4,43": 0,
+      "9,43": 0
+    },
+    "ColStyles": {
+      "41": 4
+    },
+    "SheetStyle": {
+      "FontFamily": 2
+    }
+  },
+  "Spans": [
+    "1,38,2,2",
+    "1,29,2,8",
+    "4,2,23,38"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//U6RWdw24BQ8I2783t1bnv3fNExeD53SeyzXyLf2hn9yN8cTOc9gqQkzuGD5AOo7zOWGIRMZ7MEg8Btm5vfwnfzPm2nKOV5ssYSPn/3C/DkpHm/OBJtzm25XB7Rp1JZTLvkwMselPy/W9B9o8uybq+G1ge3j6Qyp+E/IYqsV7h4PkTdbUF1J09tyu2liAJ/La033EqcIqefYGsDnmZXnU10zewRMWMytTxxBwECmtYZAI/dKp0tRHVV0ua8HKjiYuE3vBqh6kPIhkfV/5tTKbYrbpF3w3yeoMKtjGt9ztjuIbu6jJMF9eXdu79tNaA/JcYcjeK/ZMeEwvo97oXTIxpouxwB4SOb6LsWFCVQCiRGmlw+InCPuSXeTv40YzfjpDKjqGn5hb/eR03S2ksVchNalk7yKgG9xATKqPDWmk/MtSkWpoGdyanoui/8NoFOLtqx8QkyErKAzNwektMWD4sFFLqKV2b2q0tJHL70WLFZ5pL39SdXZSwgQ5naSd2foGGL9R+9I+HJAQHl1LETxRG9fa1YN3y2IG/eOZPt9wI2+B1bNPJoSLRPQ8wlpKzgP2eyvjct61oPETB+ZVZI/XskICzTB1M5EgMrV+mgFLveoNkLbdXWuy0rqiuBKibjJjcYMTqUI2TlTkLkSoKLuR/cPSXKb9X9Sh/sIgmmhVhu7nRHeWGLxwwcSejJbcv7F7iCHeKf6GQgdH9JGwiv3vT1DqAaTgBLBOYop3BJDHPox45jyKlc7JmxW3db4bnuSvUiXV/LW0D285Ka8n6TmOpajHKJuupH7g9Q/QJX20GKBms68RExOhOrF9KrCyncQIThfYeLvBn8OtsnFcEkxcsFcrshOnt0uBH4xf6+xJCGKOt9aLzfcI1AdTTfZJvm9MIWbrh8EJsDzbPdhUThFDQw==|920

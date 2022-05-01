@@ -1,0 +1,56 @@
+{
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.ServerCommands.Models.PostRequestTrigger, ServerDesignerCommon",
+      "Permission": {
+        "AllowRoles": [
+          "FGC_LoginUser",
+          "FGC_Anonymous"
+        ]
+      },
+      "Parameters": [
+        {
+          "Name": "api_key"
+        },
+        {
+          "Name": "url"
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "PostDataToWebApi.PostDataCommand, PostDataToWebApi",
+      "PostData": {
+        "DataItemType": 0
+      },
+      "WebUrl": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=url"
+      },
+      "Method": "GET",
+      "SuccessCallback": "// 성공적으로 반환된 데이터는 'result' 변수에 저장됩니다.\r\n// 성공적인 요청의 반환을 완료하실 때에는 'result' 변수를 사용하십시오. \r\n//console.log(result);",
+      "ErrorCallback": "// 오류 데이터는 'error' 변수에 저장됩니다.\r\n// 예외를 처리하실 때에는 'error' 변수를 사용하십시오. \r\nconsole.error(error);",
+      "NewParameter": "history_detail",
+      "Header": [
+        {
+          "Type": "X-Riot-Token",
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=api_key"
+          }
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+      "Message": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=history_detail"
+      },
+      "CustomReturns": []
+    }
+  ],
+  "Name": "전적 상세정보"
+}
